@@ -1,3 +1,3 @@
 # convergence-modes
 
-A mathematical diagram showing modes of convergence for random variables.
+A [pdf](./convergence-modes.pdf) containing mathematical results, diagrams and proofs for probabilistic modes of convergence.
