@@ -48,9 +48,9 @@ $$\mathbb{P}(|X_n - X| > \epsilon) \to 0$$
 \subsection*{Convergence in distribution ($d$)}
 
 $X_n \xrightarrow{d} X$
-if for all continuous $f: \mathbb{R} \to \mathbb{R}$,
+if whenever $\mathbb{P}(X \leq \,\boldsymbol{\cdot}\,)$ is continuous at $x$
 as $n \to \infty$,
-$$\mathbb{E}[f(X_n)] \to \mathbb{E}[f(X)]$$
+$$\mathbb{P}(X_n \leq x) \to \mathbb{P}(X \leq x)$$
 
 \subsection*{Convergence in $L^p$, for $1 \leq p < \infty$}
 
@@ -204,7 +204,22 @@ Therefore
 \end{align*}
 
 \subsection*{7. Convergence in probability implies convergence in distribution}
-
+Take $x$ a continuity point of $\mathbb{P}(X \leq \,\boldsymbol{\cdot}\,)$, and
+fix $\epsilon > 0$.
+\begin{align*}
+  \mathbb{P}(X_n \leq x)
+  &\leq \mathbb{P}(X \leq x+\epsilon) + \mathbb{P}(|X_n - X| > \epsilon) \\
+  &\to \mathbb{P}(X \leq x+\epsilon) \qquad \text{as } n \to \infty
+\end{align*}
+%
+Similarly
+\begin{align*}
+  \mathbb{P}(X_n \leq x)
+  &\geq \mathbb{P}(X \leq x-\epsilon) - \mathbb{P}(|X_n - X| > \epsilon) \\
+  &\to \mathbb{P}(X \leq x-\epsilon) \qquad \text{as } n \to \infty
+\end{align*}
+%
+So $\mathbb{P}(X_n \leq x) \to \mathbb{P}(X \leq x)$, by continuity at $x$.
 
 
 
